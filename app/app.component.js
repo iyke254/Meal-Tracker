@@ -15,7 +15,7 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "\n<div class=\"container\">\n    <h1>Meal Tracker</h1>\n</div>  "
+            template: "\n<div class=\"container\">\n  <h1>Meal Tracker</h1>\n    <form>\n      <div class=\"form-group\">\n        <label for=\"name\">Name</label>\n        <input id=\"name\" class=\"form-control\" type=\"text\">\n      </div>\n      <div class=\"form-group\">\n        <label for=\"details\">Details</label>\n        <input id=\"details\" class=\"form-control\" type=\"text\">\n      </div>\n      <div class=\"form-group\">\n        <label for=\"cal\">Calories</label>\n        <input id=\"cal\" class=\"form-control\" type=\"number\">\n      </div>\n    </form>\n    <button type=\"submit\" class=\"btn\">Save</button>\n    <button type=\"submit\" class=\"btn\">Edit</button>\n</div>  "
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
