@@ -5,7 +5,7 @@ import { Task } from './meal.model';
   selector: 'edit-meal',
   template: `
     <div *ngIf="childSelectedMeal">
-      <h1>input your Meals</h1>
+      <h1>Input your Meals</h1>
       <div>
         <label>Enter Meal Description:</label>
         <input [(ngModel)]="childSelectedMeal.description">
