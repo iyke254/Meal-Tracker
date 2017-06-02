@@ -1,0 +1,29 @@
+{
+  "name": "ajs",
+  "description": "ajs",
+  "main": "bower install moment --save",
+  "authors": [
+    "npm install browser-sync --save-dev"
+  ],
+  "license": "bower install jquery --save",
+  "homepage": "bower install bootstrap --save",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "keywords": [
+    "npm",
+    "install",
+    "bower-files",
+    "--save-dev"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "bootstrap": "^3.3.7",
+    "moment": "^2.18.1"
+  },
+  "private": true
+}
