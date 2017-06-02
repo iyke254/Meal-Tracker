@@ -11,11 +11,27 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var AppComponent = (function () {
     function AppComponent() {
+        this.masterMealList = [
+            new Meal("Chapati.", 500),
+            new Meal("Ugali.", 700),
+            new Meal("Mandazi.", 250),
+            new Meal("Fruit Salad.", 200),
+        ];
+        this.selectedMeal = null;
     }
+    AppComponent.prototype.showDetails = function (clickedMeal) {
+        this.selectedMeal = clickedMeal;
+    };
+    AppComponent.prototype.finishedEditing = function () {
+        this.selectedMeal = null;
+    };
+    AppComponent.prototype.addMeal = function (newMealFromChild) {
+        this.masterMealList.push(newTaskFromChild);
+    };
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "\n<div class=\"container\">\n  <h1>Meal Tracker</h1>\n    \n    <button type=\"submit\" class=\"btn\">Save</button>\n    <button type=\"submit\" class=\"btn\">Edit</button>\n</div>  "
+            template: "\n<div class=\"container\">\n  <h1>Meal Tracker</h1>\n  <meal-list\n    [childMealList]=\"masterMealList\"\n    (clickSender)=\"showDetails($event)\"\n    ></meal-list>\n  <edit-meal\n    [childSelectedMeal]=\"selectedMeal\"\n    (doneClickedSender)=\"finishedEditing()\"\n  ></edit-meal>\n  <new-meal\n      (newMealSender)=\"addMeal($event)\"\n  ><new-meal>\n</div>\n "
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
