@@ -1,5 +1,5 @@
 import {Pipe, PipeTransform} from '@angular/core';
-import {Task} from './meal.model';
+import {Meal} from './meal.model';
 
 @Pipe({
   name: "complete",
