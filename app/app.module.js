@@ -12,7 +12,11 @@ var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var forms_1 = require('@angular/forms');
 var app_component_1 = require('./app.component');
-var completeness_pipe_1 = require('./completeness.pipe');
+var meal_list_component_1 = require('./meal-list.component');
+var edit_meal_component_1 = require('./edit-meal.component');
+var new_meal_component_1 = require('./new-meal.component');
+var complete_pipe_1 = require('./complete.pipe');
+var meal_component_1 = require('./meal.component');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -24,11 +28,11 @@ var AppModule = (function () {
             ],
             declarations: [
                 app_component_1.AppComponent,
-                MealListComponent,
-                EditMealComponent,
-                NewMEalComponent,
-                completeness_pipe_1.CompletenessPipe,
-                MealComponent,
+                meal_list_component_1.MealListComponent,
+                edit_meal_component_1.EditMealComponent,
+                new_meal_component_1.NewMealComponent,
+                complete_pipe_1.CompletePipe,
+                meal_component_1.MealComponent,
             ],
             bootstrap: [app_component_1.AppComponent]
         }), 

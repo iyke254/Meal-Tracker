@@ -9,6 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var meal_model_1 = require('./meal.model');
 var EditMealComponent = (function () {
     function EditMealComponent() {
         this.doneClickedSender = new core_1.EventEmitter();
@@ -18,7 +19,7 @@ var EditMealComponent = (function () {
     };
     __decorate([
         core_1.Input(), 
-        __metadata('design:type', Object)
+        __metadata('design:type', meal_model_1.Meal)
     ], EditMealComponent.prototype, "childSelectedMeal", void 0);
     __decorate([
         core_1.Output(), 

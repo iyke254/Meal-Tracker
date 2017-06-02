@@ -9,10 +9,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var CompletenessPipe = (function () {
-    function CompletenessPipe() {
+var CompletePipe = (function () {
+    function CompletePipe() {
     }
-    CompletenessPipe.prototype.transform = function (input, desiredCompleteness) {
+    CompletePipe.prototype.transform = function (input, desiredCompleteness) {
         var output = [];
         if (desiredCompleteness === "notDone") {
             for (var i = 0; i < input.length; i++) {
@@ -34,14 +34,14 @@ var CompletenessPipe = (function () {
             return input;
         }
     };
-    CompletenessPipe = __decorate([
+    CompletePipe = __decorate([
         core_1.Pipe({
             name: "complete",
             pure: false
         }), 
         __metadata('design:paramtypes', [])
-    ], CompletenessPipe);
-    return CompletenessPipe;
+    ], CompletePipe);
+    return CompletePipe;
 }());
-exports.CompletenessPipe = CompletenessPipe;
+exports.CompletePipe = CompletePipe;
 //# sourceMappingURL=complete.pipe.js.map

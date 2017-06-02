@@ -1,5 +1,5 @@
 import { Component, Output, EventEmitter } from '@angular/core';
-import { Task } from './meal.model';
+import { Meal } from './meal.model';
 
 @Component({
   selector: 'new-meal',
@@ -24,7 +24,7 @@ import { Task } from './meal.model';
 export class NewMealComponent {
   @Output() newMealkSender = new EventEmitter();
   addClicked(description: string, id: number) {
-    var newMealToAdd: Task = new Meal(description, id);
+    var newMealToAdd: Meal = new Meal(description, id);
     this.newMealSender.emit(newMealToAdd);
   }
 }

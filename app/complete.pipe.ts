@@ -5,7 +5,7 @@ import {Meal} from './meal.model';
   name: "complete",
   pure: false
 })
-export class CompletenessPipe implements PipeTransform {
+export class CompletePipe implements PipeTransform {
   transform(input: Meal[], desiredCompleteness) {
     var output: Meal[] = [];
     if(desiredCompleteness === "notDone") {
