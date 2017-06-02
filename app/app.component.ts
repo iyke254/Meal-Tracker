@@ -19,5 +19,20 @@ import {Component}from '@angular/core';
  `
 })
 export class AppComponent{
-
+  public masterMealList: Meal[] = [
+    new Meal("Chapati.", 500),
+    new Meal("Ugali.", 700),
+    new Meal("Mandazi.", 250),
+    new Meal("Fruit Salad.", 200),
+  ];
+  selectedMeal: Meal = null;
+  showDetails(clickedMeal: Meal) {
+    this.selectedMeal = clickedMeal;
+  }
+  finishedEditing(){
+    this.selectedMeal = null;
+  }
+  addMeal(newMealFromChild: Meal) {
+    this.masterMealList.push(newTaskFromChild);
+  }
 }
