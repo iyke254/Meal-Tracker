@@ -4,23 +4,19 @@ import {Component}from '@angular/core';
   template: `
 <div class="container">
   <h1>Meal Tracker</h1>
-    <form>
-      <div class="form-group">
-        <label for="name">Name</label>
-        <input id="name" class="form-control" type="text">
-      </div>
-      <div class="form-group">
-        <label for="details">Details</label>
-        <input id="details" class="form-control" type="text">
-      </div>
-      <div class="form-group">
-        <label for="cal">Calories</label>
-        <input id="cal" class="form-control" type="number">
-      </div>
-    </form>
-    <button type="submit" class="btn">Save</button>
-    <button type="submit" class="btn">Edit</button>
-</div>  `
+  <meal-list
+    [childMealList]="masterMealList"
+    (clickSender)="showDetails($event)"
+    ></meal-list>
+  <edit-meal
+    [childSelectedMeal]="selectedMeal"
+    (doneClickedSender)="finishedEditing()"
+  ></edit-meal>
+  <new-meal
+      (newMealSender)="addMeal($event)"
+  ><new-meal>
+</div>
+ `
 })
 export class AppComponent{
 
