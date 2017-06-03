@@ -18,13 +18,13 @@ var MealListComponent = (function () {
         this.selectedCompleteness = optionFromMenu;
         console.log(this.selectedCompleteness);
     };
-    MealListComponent.prototype.editButtonHasBeenClicked = function (taskToEdit) {
-        this.clickSender.emit(taskToEdit);
+    MealListComponent.prototype.editButtonHasBeenClicked = function (MealToEdit) {
+        this.clickSender.emit(MealToEdit);
     };
     __decorate([
         core_1.Input(), 
         __metadata('design:type', Array)
-    ], MealListComponent.prototype, "childMealkList", void 0);
+    ], MealListComponent.prototype, "childMealList", void 0);
     __decorate([
         core_1.Output(), 
         __metadata('design:type', Object)
@@ -32,7 +32,7 @@ var MealListComponent = (function () {
     MealListComponent = __decorate([
         core_1.Component({
             selector: 'meal-list',
-            template: "\n    <select (change)=\"onChange($event.target.value)\" class=\"filter\">\n      <option value=\"all\">Show All</option>\n      <option value=\"isDone\">Show Done</option>\n      <option value=\"notDone\" selected=\"selected\">Show Not Done</option>\n    </select>\n    <div *ngFor=\"let currentMeal of childMealList | completeness:selectedCompleteness\">\n      <meal-display [meal]=\"currentMeal\"></meal-display>\n      <button (click)=\"editButtonHasBeenClicked(currentMeal)\">Edit</button>\n    </div>\n  "
+            template: "\n    <select (change)=\"onChange($event.target.value)\" class=\"filter\">\n      <option value=\"all\">Show Meals with 500 calories and above</option>\n      <option value=\"isDone\">Show Meals with less than 500 calories</option>\n      <option value=\"all2\">Show All</option>\n    </select>\n    <div *ngFor=\"let currentMeal of childMealList | complete:selectedComplete\">\n      <meal-display [meal]=\"currentMeal\"></meal-display>\n      <button (click)=\"editButtonHasBeenClicked(currentMeal)\">Edit</button>\n    </div>\n  "
         }), 
         __metadata('design:paramtypes', [])
     ], MealListComponent);

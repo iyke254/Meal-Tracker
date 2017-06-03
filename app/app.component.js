@@ -9,13 +9,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var meal_model_1 = require('./meal.model');
 var AppComponent = (function () {
     function AppComponent() {
         this.masterMealList = [
-            new Meal("Chapati.", 500),
-            new Meal("Ugali.", 700),
-            new Meal("Mandazi.", 250),
-            new Meal("Fruit Salad.", 200),
+            new meal_model_1.Meal("Chapati.", 500),
+            new meal_model_1.Meal("Ugali.", 700),
+            new meal_model_1.Meal("Mandazi.", 250),
+            new meal_model_1.Meal("Fruit Salad.", 200),
         ];
         this.selectedMeal = null;
     }
@@ -26,12 +27,12 @@ var AppComponent = (function () {
         this.selectedMeal = null;
     };
     AppComponent.prototype.addMeal = function (newMealFromChild) {
-        this.masterMealList.push(newTaskFromChild);
+        this.masterMealList.push(newMealFromChild);
     };
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "\n<div class=\"container\">\n  <h1>Meal Tracker</h1>\n  <meal-list\n    [childMealList]=\"masterMealList\"\n    (clickSender)=\"showDetails($event)\"\n    ></meal-list>\n  <edit-meal\n    [childSelectedMeal]=\"selectedMeal\"\n    (doneClickedSender)=\"finishedEditing()\"\n  ></edit-meal>\n  <new-meal\n      (newMealSender)=\"addMeal($event)\"\n  ><new-meal>\n</div>\n "
+            template: "\n<div class=\"container-fluid\">\n<h1>Meal Tracker</h1>\n  <div class =\"ml col-md-6\">\n    <p>Welcome to Your daily Calorie Counter<p>\n    <p>Here you can input your meals and calories and keep a record of them.</p>\n    <meal-list\n      [childMealList]=\"masterMealList\"\n      (clickSender)=\"showDetails($event)\"\n    ></meal-list>\n  </div>\n  <div class=\"nm col-md-6\">\n    <edit-meal\n      [childSelectedMeal]=\"selectedMeal\"\n      (doneClickedSender)=\"finishedEditing()\"\n    ></edit-meal>\n    <new-meal\n      (newMealSender)=\"addMeal($event)\"\n    ></new-meal>\n  </div>\n</div>\n "
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);

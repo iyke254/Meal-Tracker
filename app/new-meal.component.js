@@ -9,22 +9,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var meal_model_1 = require('./meal.model');
 var NewMealComponent = (function () {
     function NewMealComponent() {
-        this.newMealkSender = new core_1.EventEmitter();
+        this.newMealSender = new core_1.EventEmitter();
     }
     NewMealComponent.prototype.addClicked = function (description, id) {
-        var newMealToAdd = new Meal(description, id);
+        var newMealToAdd = new meal_model_1.Meal(description, id);
         this.newMealSender.emit(newMealToAdd);
     };
     __decorate([
         core_1.Output(), 
         __metadata('design:type', Object)
-    ], NewMealComponent.prototype, "newMealkSender", void 0);
+    ], NewMealComponent.prototype, "newMealSender", void 0);
     NewMealComponent = __decorate([
         core_1.Component({
             selector: 'new-meal',
-            template: "\n    <h1>New Meal</h1>\n    <div>\n      <label>Enter Meal Description:</label>\n      <input #newDescription>\n    </div>\n    <div>\n      <label>Enter Meal Calories:</label>\n      <input #newId>\n      <button (click)=\"\n        addClicked(newDescription.value, newId.value);\n        newDescription.value='';\n        newId.value='';\n      \">Add</button>\n    </div>\n  "
+            template: "\n    <h2>New Meal</h2>\n    <div>\n      <label>Enter Meal Description:</label>\n      <input #newDescription>\n    </div>\n    <div>\n      <label>Enter Meal Calories:</label>\n      <input #newId>\n      <button (click)=\"\n        addClicked(newDescription.value, newId.value);\n        newDescription.value='';\n        newId.value='';\n      \">Add</button>\n    </div>\n  "
         }), 
         __metadata('design:paramtypes', [])
     ], NewMealComponent);

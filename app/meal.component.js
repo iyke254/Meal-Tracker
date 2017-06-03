@@ -23,7 +23,7 @@ var MealComponent = (function () {
     MealComponent = __decorate([
         core_1.Component({
             selector: 'meal-display',
-            template: "\n  <div>\n    <input *ngIf=\"meal.done === true\" type=\"checkbox\" checked (click)=\"toggleDone(false)\"/>\n    <input *ngIf=\"meal.done === false\" type=\"checkbox\" (click)=\"toggleDone(true)\"/>\n    <label>{{ task.description }}</label>\n  </div>\n  "
+            template: "\n  <div>\n    <label>{{ meal.description }}</label>\n  </div>\n  "
         }), 
         __metadata('design:paramtypes', [])
     ], MealComponent);

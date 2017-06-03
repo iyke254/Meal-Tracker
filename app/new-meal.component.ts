@@ -4,7 +4,7 @@ import { Meal } from './meal.model';
 @Component({
   selector: 'new-meal',
   template: `
-    <h1>New Meal</h1>
+    <h2>New Meal</h2>
     <div>
       <label>Enter Meal Description:</label>
       <input #newDescription>
@@ -22,7 +22,7 @@ import { Meal } from './meal.model';
 })
 
 export class NewMealComponent {
-  @Output() newMealkSender = new EventEmitter();
+  @Output() newMealSender = new EventEmitter();
   addClicked(description: string, id: number) {
     var newMealToAdd: Meal = new Meal(description, id);
     this.newMealSender.emit(newMealToAdd);
